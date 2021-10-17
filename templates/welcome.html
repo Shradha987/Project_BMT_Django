@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Welcome to Book Management Tool</title>
+    <style>
+
+        .container {
+          position: relative;
+          width: auto;
+        }
+
+        .image {
+          display: block;
+          width: auto;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .2s ease;
+          background-color: #C761A8;
+        }
+
+        .container:hover .overlay {
+          opacity: 1;
+        }
+
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-20%, -20%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "app1/css/style.css">
+    <meta charset="UTF-8">
+    <title>Book Management Tool</title>
+
+
+</head>
+<body>
+  <table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="purple">
+    <tr>
+      <td align="center">
+          <h3 align="center" style="color:white;">Welcome To Book Management System</h3></td>
+        </table>
+
+    </tr>
+  </table>
+
+ <table width="100%" height="100" border="0" cellspacing="1" cellpadding="1" bgcolor="#A44BC5">
+   <tr>
+     <td align="center">
+        <table width="500" border="0" cellpadding="1" cellspacing="1">
+          <tr>
+              <td align="left"><h3><a href="add/" style="color:black;">Add Book</a></h3></td>
+              <td align="center"><h3><a href="edit/" style="color:black">Edit Book</a></h3></td>
+              <td align="right"> <h3><a href="delete/" style="color:black">Delete Book</a></h3></td>
+          </tr>
+        </table>
+     </td>
+   </tr>
+ </table>
+
+<br><br>
+
+<table width="100%" height="100" border="0" cellspacing="1" cellpadding="1" bgcolor="#A44BC5">
+   <tr>
+     <td align="center">
+        <table width="500" border="0" cellpadding="1" cellspacing="1">
+          <tr>
+              <td align="left"><h3><a href="list/" style="color:black;">List All Books</a></h3></td>
+              <td align="center"><h3><a href="type/" style="color:black">List by Type</a></h3></td>
+              <td align="right"> <h3><a href="genre/" style="color:black">List by Genre</a></h3></td>
+          </tr>
+        </table>
+     </td>
+   </tr>
+ </table>
+<br>
+<div align="center">
+        <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJvb2tzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" align="center">
+</div>
+  <br>
+  <!--  <img src="{% static "p1.png" %}" style ="width:30%" alt="err">-->
+
+
+<table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="purple">
+    <tr>
+      <td align="center">
+        <table align="center" width="500" border="0" cellpadding="1" cellspacing="1"></table>
+        <td width="1000"><h4 style="color:white;">Home - About - Contact<br>
+           © 2021 My Business Website</h4></td>
+        </table>
+      </td>
+    </tr>
+  </table>
+<div>
+
+<!--&lt;!&ndash;    {% for n in img %}&ndash;&gt;-->
+<!--    <img src  ={{img.img}}/>-->
+<!--&lt;!&ndash;    {% endfor %}&ndash;&gt;-->
+
+</div>
+</body>
+</html>
+
+
+
+
+

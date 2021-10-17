@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <style>
+        body
+        {
+        background-color:LightBlue;
+        }
+
+        th
+        {
+        font-family:"Monaco",Monospace;
+        color:red;
+        }
+        td
+        {
+        font-family:"Lucida console",Monospace;
+        color:blue;
+        }
+    </style>
+
+    <center><h1>{{book_heading}}</h1></center>
+    {{message}}
+    <form action="send.php" method="post">
+        {% csrf_token %}
+        Book id:<input type="text" name="id" value="{{Books.id}}"><br><br>
+        Book Name:<input type="text" name=" book_title" value="{{Books.book_title}}"><br><br>
+        Book Author:<input type="text" name="author" value="{{Books.author}}"><br><br>
+        Book Type:<input type="text" name = "type_of_book" value="{{Books.type_of_book}}"><br><br>
+        Book Genre:<input type="text" name = "genre_of_book" value="{{Books.genre_of_book}}"><br><br>
+        Book Publication:<input type="text" name="publication" value="{{Books.publication}}"><br><br>
+        Number of Pages:<input type="text" name="number_of_pages" value="{{Books.number_of_pages}}"><br><br>
+        Price of Book:<input type="text" name="price_of_book" value="{{Books.price_of_book}}"><br><br>
+        Book Cover:<input type="file" name="cover_of_book "  accept="image/gif, image/jpeg, image/png" value="{{Books.cover_of_book }}"><br><br>
+
+
+        <input type="Submit">
+    </form>
+
+{% if blist %}
+
+<table border="1">
+    <thead>
+        <th>Book id</th>
+        <th>Book Name</th>
+        <th>Book Author</th>
+        <th>Book Type</th>
+          <th>Book Genre</th>
+          <th>Book Publication</th>
+          <th> Number of Pages</th>
+          <th>Price of Book</th>
+          <th>Book Cover</th>
+        <th>ACTION</th>
+
+
+    </thead>
+    {% for i in blist %}
+        <tr>
+            <td>{{i.id}}</td>
+             <td>{{i.book_title}}</td>
+           <td>{{i.author}}</td>
+           <td>{{i.type_of_book}}</td>
+           <td>{{i.genre_of_book}}</td>
+           <td>{{i.publication}}</td>
+           <td>{{i.number_of_pages}}</td>
+           <td>{{i.price_of_book}}</td>
+           <td>{{i.cover_of_book}}</td>
+
+            <td>
+                <a href="/delete{{emp.id}}">DELETE</a>
+            </td>
+        </tr>
+    {% endfor %}
+
+
+</table>
+{% else %}
+    No Records Present....
+{% endif %}
+</body>
+</html>

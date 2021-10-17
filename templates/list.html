@@ -1,0 +1,63 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .b-size {
+  border: 5px solid darkblue;
+  width :200px;
+}
+</style>
+<body>
+
+
+{% if blist %}
+<form method="post" action="/list/save">
+<table border="1">
+    <thead>
+        <th>Book ID</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Type</th>
+        <th>Book Genre</th>
+        <th>Book Publication</th>
+        <th>Book Pages</th>
+        <th>Book Price</th>
+        <th>Book Photo</th>
+<!--        <th>ACTION</th>-->
+
+
+    </thead>
+    {% for b in blist %}
+        <tr>
+            <td>{{b.id}}</td>
+            <td>{{b.book_title}}</td>
+            <td>{{b.author}}</td>
+            <td>{{b.type}}</td>
+            <td>{{b.genre}}</td>
+            <td>{{b.pub}}</td>
+            <td>{{b.pages}}</td>
+            <td>{{b.price}}</td>
+           <td><img src={{b.cover_of_book.url}} alt="" width = "120" height="90">{{b.book_title}}</img></td>
+
+
+
+
+        </tr>
+    {% endfor %}
+
+
+
+</table>
+{% else %}
+    No Records Present....
+{% endif %}
+
+
+
+</body>
+</html>

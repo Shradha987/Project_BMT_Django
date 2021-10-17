@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if blist %}
+<form method="post" action="/list/type/save">
+<table border="1">
+    <thead>
+        <th>Book ID</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Type</th>
+        <th>Book Genre</th>
+        <th>Book Publication</th>
+        <th>Book Pages</th>
+        <th>Book Price</th>
+<!--        <th>ACTION</th>-->
+
+
+    </thead>
+    {% for b in blist %}
+        <tr>
+            <td>{{b.id}}</td>
+            <td>{{b.book_title}}</td>
+            <td>{{b.author}}</td>
+            <td>{{b.type}}</td>
+            <td>{{b.genre}}</td>
+            <td>{{b.pub}}</td>
+            <td>{{b.pages}}</td>
+            <td>{{b.price}}</td>
+<!--            <td>-->
+<!--                <a href="/delete{{emp.id}}">DELETE</a>-->
+<!--            </td>-->
+        </tr>
+    {% endfor %}
+
+
+</table>
+{% else %}
+    No Records Present....
+{% endif %}
+</body>
+</html>

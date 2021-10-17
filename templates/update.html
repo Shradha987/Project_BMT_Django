@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+   <form action="/edit/" method="post">
+    {% csrf_token %}
+            Select Type : <select name="choice">
+                        <option value="id">id</option>
+
+                 </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="value"> <br><br>
+
+            <input type="submit"> <br><br>
+     </form>
+
+
+<!--{% if record %}-->
+<!--     <form method="post" action="/edit/save">-->
+<!--         {% csrf_token %}-->
+<!--            Book ID: <input type="text" name="id" value="{{record.id}}" readonly> <br><br>-->
+<!--            Book Title : <input type="text" name="book_title" value="{{record.book_title}}"> <br><br>-->
+<!--            Book Author : <input type="text" name="author" value="{{record.author}}"> <br><br>-->
+<!--            Book Type : <input type="text" name="type" value="{{record.type}}"> <br><br>-->
+<!--            Book Genre : <input type="text" name="genre" value="{{record.genre}}"> <br><br>-->
+<!--           Book Publication : <input type="text" name="pub" value="{{record.pub}}"> <br><br>-->
+<!--            Book Pages : <input type="text" name="pages" value="{{record.pages}}"> <br><br>-->
+<!--            Book Price : <input type="text" name="price" value="{{record.price}}"> <br><br>-->
+<!--&lt;!&ndash;            {% if record.cover_of_book %}&ndash;&gt;-->
+<!--&lt;!&ndash;          Book Photo :<img src="{{record.cover_of_book.url}}" width="100"> <br><br>&ndash;&gt;-->
+<!--&lt;!&ndash;            {% endif %}&ndash;&gt;-->
+
+
+<!--            <input type="submit" name="update" value="update"> <br><br>-->
+<!--        </form>-->
+
+<!--    {% endif %}-->
+
+{% if blist %}
+
+<table border="1">
+    <thead>
+       <th>Book ID</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Type</th>
+        <th>Book Genre</th>
+        <th>Book Publication</th>
+        <th>Book Pages</th>
+        <th>Book Price</th>
+<!--        <th>Book Photo</th>-->
+
+
+    </thead>
+    {% for b in blist %}
+        <tr>
+            <td>{{b.id}}</td>
+            <td>{{b.book_title}}</td>
+            <td>{{b.author}}</td>
+            <td>{{b.type}}</td>
+            <td>{{b.genre}}</td>
+            <td>{{b.pub}}</td>
+            <td>{{b.pages}}</td>
+            <td>{{b.price}}</td>
+<!--            <td>{{b.cover_of_book}}</td>-->
+<!--                <a href="/delete{{emp.id}}">DELETE</a>-->
+
+        </tr>
+    {% endfor %}
+
+
+</table>
+{{message}}
+{% endif %}
+</body>
+</html>

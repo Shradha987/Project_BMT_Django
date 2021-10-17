@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Data</title>
+    <meta name="description" content="Page Description Here" />
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+    <style>
+        body
+        {
+        background-color:LightBlue;
+        }
+        th
+        {
+        font-family:"Monaco",Monospace;
+        color:red;
+        }
+        td
+        {
+        font-family:"Lucida console",Monospace;
+        color:blue;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form action="/add/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <table   align="center" width="100" cellpadding="5" cellspacing="15">
+                <tablebody>
+
+                    <th colspan="4"><b><u>Book Information<u><b>
+
+                    </th>
+
+                    <tr>
+                        <td>Book ID</td>
+                         <td> </td>
+                         <td> </td>
+                        <td><input type="text" name="id" value=""></td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>Book Title</td>
+                       <td> </td>
+                         <td> </td>
+
+                        <td><input type="text" name="book_title" value=""></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Book Author</td>
+                         <td> </td>
+                         <td> </td>
+                            <td><input type="text" name="author" value=""></td>
+
+                    </tr>
+
+<!--                    <tr>-->
+<!--                        <td>Book Type</td>-->
+
+<!--                      <td> </td>-->
+<!--                      <td> </td>-->
+
+<!--                         <td><input type="text" name="type" value=""></td>-->
+
+<!--                    </tr>-->
+                     <tr>
+                        <td>Book Type</td>
+                          <td> </td>
+                         <td> </td>
+                         <td>
+                             <select name="type">
+                                 <option value="Autobiography">Autobiography</option>
+                                  <option value="Novel">Novel</option>
+                                  <option value="Story">Stories</option>
+                                  <option value="Poems">Poems</option>
+
+
+                             </select></td>
+                    </tr>
+
+                     <tr>
+                        <td>Book Genre</td>
+                          <td> </td>
+                         <td> </td>
+                         <td>
+                             <select name="genre">
+                                 <option value="History">History</option>
+                                  <option value="Science">Science</option>
+                                  <option value="SciFiction">Science Fiction</option>
+                                  <option value="Arts">Arts</option>
+                             </select></td>
+                    </tr>
+<!--                    <tr>-->
+<!--                        <td>Book Genre</td>-->
+<!--                      <td> </td>-->
+<!--                      <td> </td>-->
+
+
+<!--                         <td><input type="text" name="genre" value=""></td>-->
+
+
+<!--                    </tr>-->
+
+                      <tr>
+                        <td>Book Publication</td>
+                          <td> </td>
+                         <td> </td>
+                            <td><input type="text" name="pub" value=""></td>
+
+                    </tr>
+
+
+                   <tr>
+                        <td>Book Pages</td>
+                        <td> </td>
+                         <td> </td>
+
+                            <td><input type="text" name="pages" value=""></td>
+                    </tr>
+
+
+                      <tr>
+                        <td>Book Price</td>
+                         <td> </td>
+                         <td> </td>
+
+                            <td><input type="text" name="price" value=""></td>
+
+                    </tr>
+
+                      <tr>
+                        <td>Book Photo</td>
+                         <td> </td>
+                         <td> </td>
+
+                            <td><input type="file" name="cover_of_book"  accept="image/gif, image/jpeg, image/png" value=""></td>
+
+                    </tr>
+
+ </tablebody>
+</table>
+        {{message}}
+      <br><br><br>
+
+                          <center> <input type="submit" align="center" ></center><br><br>
+
+
+
+
+
+        </form>
+
+</div>
+</body>
+</html>

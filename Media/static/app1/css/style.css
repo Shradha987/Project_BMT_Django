@@ -1,0 +1,64 @@
+ <style>
+        .bluetext
+        {
+        font-family:Georgia;
+        color:blue;
+        }
+
+        .greentext
+        {
+        font-size:large;
+        color:green;
+        }
+        .underline
+        {
+        text-decoration:underline;
+        }
+        .myborder
+        {
+        border:4px;
+        border-color:pink;
+        border-style:dashed;
+        }
+
+.container {
+          position: relative;
+          width: auto;
+        }
+
+        .image {
+          display: block;
+          width: auto;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .2s ease;
+          background-color: #C761A8;
+        }
+
+        .container:hover .overlay {
+          opacity: 1;
+        }
+
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-20%, -20%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+</style>
